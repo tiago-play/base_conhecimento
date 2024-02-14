@@ -2,118 +2,141 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoramento HD</title>
+    <title>HELP-DESK</title>
     <style>
-    .logo {
-      width: 300px;
-      height: auto; 
-      display: block; 
-      margin: 0 auto; 
-    }
-    .container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 100px 50px;
-    padding: 100px 50px;
-}
+          .logo {
+          width: 350px;
+          height: auto; 
+          display: block; 
+          margin: 0 auto; 
+          }
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 100px 50px;
+            padding: 100px 50px;
+        }
 
-.container .card {
-    display: flex;
-    position: relative;
-    width: 250px;
-    height: 200px;
-    background: linear-gradient(#9f9f9f,#fff, aliceblue);
-    align-items: flex-start;
-    justify-content: center;
-    border-radius: 20px;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15) ;
-    transition: 0.5s;
-}
+        .container .card {
+            display: flex;
+            position: relative;
+            width: 250px;
+            height: 200px;
+            background: linear-gradient(#0090e3,#fff, aliceblue);
+            align-items: flex-start;
+            justify-content: center;
+            border-radius: 20px;
+            box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15) ;
+            transition: 0.3s;
+        }
 
-.container .card:hover {
-    height: 400px;
-}
+        .container .card:hover {
+            height: 300px;
+        }
+        .container .card .imgbox{
+            position: absolute;
+            top:20px;
+            width: 200px;
+            height: 160px;
+            background: #333;
+            border-radius: 12px;
+            transition: 0.3s;
+            overflow: hidden;
+        }
+        .container .card:hover .imgbox{
+            top: -15px;
+            scale: 0.70;
+            box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15) ;
+        }
+        .container .card .imgbox img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.container .card .imgbox{
-    position: absolute;
-    top:20px;
-    width: 200px;
-    height: 160px;
-    background: #333;
-    border-radius: 12px;
-    transition: 0.5s;
-    overflow: hidden;
-}
+        .container .card .content {
+            position: absolute;
+            width: 100%;
+            top: 252px;
+            padding: 0 30px;
+            height: 30px;
+            text-align: center;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .container .card:hover .content {
+            top: 130px;
+            height: 250px;
+        }
 
-.container .card:hover .imgbox{
-    top: -100px;
-    scale: 0.75;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15) ;
-}
+        .container .card .content h2 {
+            font-size: 1.5em;
+            font-weight: 500;
+            color: var(--color);
+        }
 
-.container .card .imgbox img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        .container .card .content p{
+            color: #0c0c0c;
+            font-size: .9em;
+        }
 
-.container .card .content {
-    position: absolute;
-    width: 100%;
-    top: 252px;
-    padding: 0 30px;
-    height: 30px;
-    text-align: center;
-    overflow: hidden;
-    transition: 0.5s;
-}
-
-.container .card:hover .content {
-    top: 130px;
-    height: 250px;
-}
-
-.container .card .content h2 {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: var(--color);
-}
-
-.container .card .content p{
-    color: #0c0c0c;
-    font-size: .9em;
-}
-
-.container .card .content a {
-    text-decoration: none;
-    position: relative;
-    top: 15px;
-    display: inline-block;
-    padding: 12px 15px;
-    background: var(--color);
-    color: #fff;
-    font-weight: 500;
-    border-radius: 12px;
-}
-    
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-}
-  </style>
+        .container .card .content a {
+            text-decoration: none;
+            position: relative;
+            top: 15px;
+            display: inline-block;
+            padding: 12px 15px;
+            background: var(--color);
+            color: #fff;
+            font-weight: 500;
+            border-radius: 12px;
+        }
+        .card {
+          position: relative;
+          width: 200px;
+          height: 200px;
+          overflow: hidden;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+          width: 100%;
+          height: auto;
+          transition: transform 0.3s ease;
+        }
+        .card-text {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          padding: 18px;
+          background-color: rgba(0, 0, 0, 0.7);
+          color: #fff;
+          transition: opacity 0.3s ease;
+          opacity: 0;
+        }
+        .card:hover img {
+          transform: scale(1.1);
+        }
+        .card:hover .card-text {
+          opacity: 1;
+        }           
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        footer {
+            background-color: none;
+            color: #fff;
+            padding: 15px auto;
+        }
     </style>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
@@ -124,10 +147,10 @@ footer {
       <a href="#" class="logo"></a>
       <img class="logo" src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/738134e2-9439-4557-a9aa-d7c335e6cc4e/DESK-removebg-preview.png" alt="Descrição da Logo">
       <ul class="navigation">
-        <li><a href="#" class="active">Servidores</a>
+        <li><a href="file:///C:/Users/ch_mendes/Desktop/WebSite_Monitoramento_HD/index.html" class="active">Home</a>
         </li>
-        <li><a href="#">Biométrico</a></li>
-        <li><a href="#">Impressora</a></li>
+        <li><a href="file:///C:/Users/ch_mendes/Desktop/WebSite_Monitoramento_HD/index.pagina2.html">Equipe</a></li>
+        <li><a href="#">Procedimentos</a></li>
         <li><a href="#">Outros</a></li>
       </ul>
     </header>
@@ -143,40 +166,61 @@ footer {
     </section>
     <section class="sec">
       <div class="container">
-        <div class="card" style="--color:#009688">
-            <div class="imgbox">
-                <img src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/55592f08-96f1-4768-9676-7ce33d5085d0/Picsart_23-06-10_15-03-48-861.jpg" alt="">
-            </div>
-            <div class="content">
-                <h2>Teló - Analista II</h2>
-                <p>E-mail -></p>
-                <a href="https://mail.google.com/mail/u/0/#chat/dm/neAce4AAAAE">saiba +</a>
-            </div>
+          <div class="container">
+
+        <script src="script.js"></script>
+        <h2>Filas de Atendimento HELP-DESK</h2>
+        <div class="card">
+          <img src="https://img.freepik.com/free-vector/security-concept-illustration_114360-1518.jpg" alt="Imagem de exemplo">
+          <div class="card-text">
+            <h2>Controle de acessos</h2>
+            <p>Descrição do texto que aparece no hover.</p>
+          </div>
         </div>
-        <div class="card" style="--color:#03a9f4">
-            <div class="imgbox">
-                <img src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/e949c1f5-4922-4dc6-a742-76f8a2c22f3c/Picsart_23-06-10_15-54-19-685.jpg" alt="">
-            </div>
-            <div class="content">
-                <h2>Play - Ass. II</h2>
-                <p>E-mail -></p>
-                <a href="https://mail.google.com/mail/u/0/#chat/dm/zGJzw4AAAAE">saiba +</a>
-            </div>
+        <div class="card">
+          <img src="https://img.freepik.com/free-vector/isometric-datacenter-concept_1284-38451.jpg?t=st=1707846615~exp=1707847215~hmac=f60c2bf94905c67a41a0f1f6d5585766c54a9d8884c9ffb5d9aeb170c0d308ab" alt="Imagem de exemplo">
+          <div class="card-text">
+            <h2>Monit. HD</h2>
+            <p>Descrição do texto que aparece no hover.</p>
+          </div>
         </div>
-        <div class="card" style="--color:#FF0000">
-            <div class="imgbox">
-                <img src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/184f5b8f-7d51-4d72-98de-90a74de5ef80/IMG_20230603_125307_137-1-.jpg" alt="">
-            </div>
-            <div class="content">
-                <h2>Chris - Ass. I</h2>
-                <p>E-mail -></p>
-                <a href="#">saiba +</a>
-            </div>
+        <div class="card">
+          <img src="https://img.freepik.com/free-vector/messenger-concept-illustration_114360-860.jpg?w=740&t=st=1707846823~exp=1707847423~hmac=f75dc34dd4dd9acd112007c2b6b19ef2dcd3fcfe0e1b7c122e222c379cccb326" alt="Imagem de exemplo">
+          <div class="card-text">
+            <h2>CHAT</h2>
+            <p>Descrição do texto que aparece no hover.</p>
+          </div>
         </div>
-    </div>
-      <h2>Equipe Monitoramento HD</h2>
+        <div class="card">
+          <img src="https://img.freepik.com/free-vector/sales-representative-abstract-concept_335657-3002.jpg?w=740&t=st=1707846765~exp=1707847365~hmac=5f1580e117c587bac3a94b31d7db8f666d5f32bbb9b4868185281451dcc09370" alt="Imagem de exemplo">
+          <div class="card-text">
+            <h2>Pós-Vendas</h2>
+            <p>Descrição do texto que aparece no hover.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://img.freepik.com/free-vector/finance-concept-illustration_114360-801.jpg?w=740&t=st=1707846698~exp=1707847298~hmac=13e462cce07b17e56c43613188a8b669409ac8d8642560d796892a79f5e74930" alt="Imagem de exemplo">
+          <div class="card-text">
+            <h2>Vendas</h2>
+            <p>Descrição do texto que aparece no hover.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://img.freepik.com/free-vector/deadline-concept-illustration_114360-6003.jpg?w=740&t=st=1707846949~exp=1707847549~hmac=d155025f966c4d9d6aa776df632694c915ce69af809e2bcf9dcc26759bb1e5fc" alt="Imagem de exemplo">
+          <div class="card-text">
+            <h2>Ponto - Lojas</h2>
+            <p>Descrição do texto que aparece no hover.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://img.freepik.com/vetores-premium/digitalizacao-de-impressao-digital-autorizacao-no-sistema-de-seguranca-digitalizacao-de-mao-humana-dedo-controle-de-acesso-ilustracao-vetorial-design-plano-isolado-no-fundo-branco-identificacao-da-pessoa_153097-1558.jpg" alt="Imagem de exemplo">
+          <div class="card-text">
+            <h2>Oracle</h2>
+            <p>Descrição do texto que aparece no hover.</p>
+          </div>
+        </div>
       <footer>
-        <div class="container">
+        <div class="footer">
             <p>&copy; 2024 Desenvolvido por: Mininos que atendem monitoramento S2. Todos os direitos reservados.</p> 
         </div>
     </footer>
@@ -224,23 +268,23 @@ footer {
         scrollTrigger : {
           scrub: true
         },
-        x: 600,
+        x: 400,
       })
+      document.addEventListener('DOMContentLoaded', function () {
+        const itemHeader = document.getElementById('item-header');
+        const itemContent = document.getElementById('item-content');
+        const toggleBtn = document.getElementById('toggle-btn');
 
-<div class="grid-container">
-    <div class="item item1">1</div>
-    <div class="item item2">2</div>
-    <div class="item item3">3</div>
-    <div class="item item4">4</div>
-    <div class="item item5">5</div>
-    <div class="item item6">6</div>
-    <div class="item item7">7</div>
-    <div class="item item8">8</div>
-    <div class="item item9">9</div>
-</div>
-
+        itemHeader.addEventListener('click', function () {
+            if (itemContent.style.display === 'none') {
+                itemContent.style.display = 'block';
+                toggleBtn.textContent = 'Recolher';
+            } else {
+                itemContent.style.display = 'none';
+                toggleBtn.textContent = 'Expandir';
+            }
+        });
+    });
     </script>
   </body>
 </html>
-
-
