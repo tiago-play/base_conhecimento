@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Equipe-HD</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    .logo {
+          width: 350px;
+          height: auto; 
+          display: block; 
+          margin: 0 auto; 
+          }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(#2b1055, #7597de);
+    overflow-x: hidden;
+}
+
+header {  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #2b1055;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c0522, transparent);
+    z-index: 1000;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#moon {
+    mix-blend-mode: screen;
+}
+
+section img#mountains_front {
+    z-index: 10;
+}
+
+#text {
+    position: absolute;
+    right: -250px;
+    color: #d4d5d5;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+}
+
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+}
+
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.sec p {
+    font-size: 1em;
+    color: #fff;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+h2 {
+    text-align: center;
+    }
+        {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(45deg, #0c0c0c,#9f9f9f,#fff);
+    }
+
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 100px 50px;
+        padding: 100px 50px;
+    }
+
+    .container .card {
+        display: flex;
+        position: relative;
+        width: 250px;
+        height: 200px;
+        background: linear-gradient(#9f9f9f,#fff, aliceblue);
+        align-items: flex-start;
+        justify-content: center;
+        border-radius: 20px;
+        box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15) ;
+        transition: 0.5s;
+    }
+
+    .container .card:hover {
+        height: 300px;
+    }
+
+    .container .card .imgbox{
+        position: absolute;
+        top:20px;
+        width: 250px;
+        height: 180px;
+        background: #333;
+        border-radius: 12px;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .container .card:hover .imgbox{
+        top: -100px;
+        scale: 0.75;
+        box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15) ;
+    }
+
+    .container .card .imgbox img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .container .card .content {
+        position: absolute;
+        width: 100%;
+        top: 252px;
+        padding: 0 30px;
+        height: 30px;
+        text-align: center;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .container .card:hover .content {
+        top: 130px;
+        height: 250px;
+    }
+
+    .container .card .content h2 {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: var(--color);
+    }
+
+    .container .card .content p{
+        color: #0c0c0c;
+        font-size: .9em;
+    }
+
+    .container .card .content a {
+        text-decoration: none;
+        position: relative;
+        top: 15px;
+        display: inline-block;
+        padding: 12px 15px;
+        background: var(--color);
+        color: #fff;
+        font-weight: 500;
+        border-radius: 12px;
+    }
+</style>
+<!-- partial:index.partial.html -->
+<header>
+    <a href="#" class="logo"></a>
+      <img class="logo" src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/738134e2-9439-4557-a9aa-d7c335e6cc4e/DESK-removebg-preview.png" alt="Descrição da Logo">
+    <ul>
+        <li><a href="file:///C:/Users/ch_mendes/Desktop/WebSite_Monitoramento_HD/index.pagina2.html" class="active">Equipe</a></li>
+        <li><a href="file:///C:/Users/ch_mendes/Desktop/WebSite_Monitoramento_HD/index.html">Home</a></li>
+        <li><a href="#">Procedimentos</a></li>
+        <li><a href="#">Outros</a></li>
+    </ul>
+</header>
+
+<section>
+    <img src="http://codingstella.com/wp-content/uploads/2024/01/download-4.png" id="stars">
+    <img src="http://codingstella.com/wp-content/uploads/2024/01/download-5.png" id="moon">
+    <img src="http://codingstella.com/wp-content/uploads/2024/01/download-6.png" id="mountains_behind">
+    <h2 id="text">Equipe-HD</h2>
+    <img src="http://codingstella.com/wp-content/uploads/2024/01/download-7.png" id="mountains_front">
+</section>
+
+<div class="sec" id="sec">
+    <h2>Equipe HELP-DESK</h2>
+<!-- partial -->
+  <script  src="./script.js"></script>
+  <div class="container">
+    <div class="card" style="--color:#009688">
+        <div class="imgbox">
+            <img src="assets/images/capa 7.png" alt="">
+        </div>
+        <div class="content">
+            <h2>Glow Up</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut perspiciatis nulla, quam delectus nam deleniti. Hic, libero perspiciatis ut quo dicta quod sit beatae quas et rerum? Aliquam, reprehenderit ut!</p>
+            <a href="#">saiba +</a>
+        </div>
+    </div>
+    <div class="card" style="--color:#03a9f4">
+        <div class="imgbox">
+            <img src="assets/images/capa 8.png" alt="">
+        </div>
+        <div class="content">
+            <h2>Fei Tô!</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut perspiciatis nulla, quam delectus nam deleniti. Hic, libero perspiciatis ut quo dicta quod sit beatae quas et rerum? Aliquam, reprehenderit ut!</p>
+            <a href="#">saiba +</a>
+        </div>
+    </div>
+    <div class="card" style="--color:#ff3e7f">
+        <div class="imgbox">
+            <img src="assets/images/capa 9.png" alt="">
+        </div>
+        <div class="content">
+            <h2>Lady Lucy</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut perspiciatis nulla, quam delectus nam deleniti. Hic, libero perspiciatis ut quo dicta quod sit beatae quas et rerum? Aliquam, reprehenderit ut!</p>
+            <a href="#">saiba +</a>
+        </div>
+    </div>
+  <script>
+    // Get references to the elements
+const stars = document.getElementById('stars');
+const moon = document.getElementById('moon');
+const mountains_behind = document.getElementById('mountains_behind');
+const text = document.getElementById('text');
+const btn = document.getElementById('btn');
+const mountains_front = document.getElementById('mountains_front');
+const header = document.querySelector('header');
+
+// Add scroll event listener
+window.addEventListener('scroll', function() {
+  // Get the current scroll position
+  let value = window.scrollY;
+  
+  // Update element styles based on scroll position
+  stars.style.left = value * 0.25 + 'px';
+  moon.style.top = value * 1.05 + 'px';
+  mountains_behind.style.top = value * 0.5 + 'px';
+  mountains_front.style.top = value * 0 + 'px';
+  text.style.marginRight = value * 4 + 'px';
+  text.style.marginTop = value * 1.5 + 'px';
+  btn.style.marginTop = value * 1.5 + 'px';
+  header.style.top = value * 1.5 + 'px';
+});
+  </script>
+
+</body>
+</html>
