@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento HD</title>
+    <style>
+    .logo {
+      width: 300px;
+      height: auto; 
+      display: block; 
+      margin: 0 auto; 
+    }
+    .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.container .card {
+    display: flex;
+    position: relative;
+    width: 250px;
+    height: 200px;
+    background: linear-gradient(#9f9f9f,#fff, aliceblue);
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15) ;
+    transition: 0.5s;
+}
+
+.container .card:hover {
+    height: 400px;
+}
+
+.container .card .imgbox{
+    position: absolute;
+    top:20px;
+    width: 200px;
+    height: 160px;
+    background: #333;
+    border-radius: 12px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.container .card:hover .imgbox{
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15) ;
+}
+
+.container .card .imgbox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .card .content {
+    position: absolute;
+    width: 100%;
+    top: 252px;
+    padding: 0 30px;
+    height: 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .content {
+    top: 130px;
+    height: 250px;
+}
+
+.container .card .content h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color);
+}
+
+.container .card .content p{
+    color: #0c0c0c;
+    font-size: .9em;
+}
+
+.container .card .content a {
+    text-decoration: none;
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 15px;
+    background: var(--color);
+    color: #fff;
+    font-weight: 500;
+    border-radius: 12px;
+}
+    
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+  </style>
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    
+    <header>
+      
+      <a href="#" class="logo"></a>
+      <img class="logo" src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/738134e2-9439-4557-a9aa-d7c335e6cc4e/DESK-removebg-preview.png" alt="Descrição da Logo">
+      <ul class="navigation">
+        <li><a href="#" class="active">Servidores</a>
+        </li>
+        <li><a href="#">Biométrico</a></li>
+        <li><a href="#">Impressora</a></li>
+        <li><a href="#">Outros</a></li>
+      </ul>
+    </header>
+    
+    <section class="parallax">
+      <h2 id="text">Help-Desk</h2>
+      <img src="monutain_01.png" id="m1">
+      <img src="trees_02.png" id="t2">
+      <img src="monutain_02.png" id="m2">
+      <img src="trees_01.png" id="t1">
+      <img src="man.png" id="man">
+      <img src="plants.png" id="plants">
+    </section>
+    <section class="sec">
+      <div class="container">
+        <div class="card" style="--color:#009688">
+            <div class="imgbox">
+                <img src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/55592f08-96f1-4768-9676-7ce33d5085d0/Picsart_23-06-10_15-03-48-861.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Teló - Analista II</h2>
+                <p>E-mail -></p>
+                <a href="https://mail.google.com/mail/u/0/#chat/dm/neAce4AAAAE">saiba +</a>
+            </div>
+        </div>
+        <div class="card" style="--color:#03a9f4">
+            <div class="imgbox">
+                <img src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/e949c1f5-4922-4dc6-a742-76f8a2c22f3c/Picsart_23-06-10_15-54-19-685.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Play - Ass. II</h2>
+                <p>E-mail -></p>
+                <a href="https://mail.google.com/mail/u/0/#chat/dm/zGJzw4AAAAE">saiba +</a>
+            </div>
+        </div>
+        <div class="card" style="--color:#FF0000">
+            <div class="imgbox">
+                <img src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/184f5b8f-7d51-4d72-98de-90a74de5ef80/IMG_20230603_125307_137-1-.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Chris - Ass. I</h2>
+                <p>E-mail -></p>
+                <a href="#">saiba +</a>
+            </div>
+        </div>
+    </div>
+      <h2>Equipe Monitoramento HD</h2>
+      <footer>
+        <div class="container">
+            <p>&copy; 2024 Desenvolvido por: Mininos que atendem monitoramento S2. Todos os direitos reservados.</p> 
+        </div>
+    </footer>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.from("#m1",{
+        scrollTrigger : {
+          scrub: true
+        },
+        y: 100,
+      })
+      gsap.from("#m2",{
+        scrollTrigger : {
+          scrub: true
+        },
+        y: 50,
+      })
+      gsap.from("#t2",{
+        scrollTrigger : {
+          scrub: true
+        },
+        x: -50,
+      })
+      gsap.from("#t1",{
+        scrollTrigger : {
+          scrub: true
+        },
+        x: 50,
+      })
+      gsap.from("#man",{
+        scrollTrigger : {
+          scrub: true
+        },
+        x: -250,
+      })
+      gsap.from("#plants",{
+        scrollTrigger : {
+          scrub: true
+        },
+        x: -50,
+      })
+      gsap.from("#text",{
+        scrollTrigger : {
+          scrub: true
+        },
+        x: 600,
+      })
+
+<div class="grid-container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+    <div class="item item9">9</div>
+</div>
+
+    </script>
+  </body>
+</html>
+
+
